@@ -1,11 +1,14 @@
 package edu.EscuelaIT.tienda.domain;
 
 import lombok.Data;
+import lombok.NonNull;
 
 @Data
 public class Persona {
-    private String nombre;
+    @NonNull
     private Long id;
+    @NonNull
+    private String nombre;
     private String apellido;
 
 }
