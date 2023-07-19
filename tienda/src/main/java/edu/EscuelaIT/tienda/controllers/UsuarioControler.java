@@ -20,8 +20,10 @@ public Usuario getUsuarios(@PathVariable Long id) {
     return usuario;
 }
 
-    @RequestMapping("/usuario")
+    @RequestMapping("/usuarios")
     public List<Usuario> getUsuarios() {
+        List<Usuario> usuarios = new ArrayList<>();
+
         Usuario usuario = new Usuario(1L);
         usuario.setNombre("Pepe");
         usuario.setApellido("Perez");
@@ -32,9 +34,13 @@ public Usuario getUsuarios(@PathVariable Long id) {
         usuario2.setApellido("Perez");
         usuario2.setEmail("juan@gmail.com");
 
-        List<Usuario> usuarios = new ArrayList<>();
+        Usuario usuario3 = new Usuario(3L);
+        usuario3.setNombre("juan");
+        usuario3.setApellido("Persasaez");
+
         usuarios.add(usuario);
         usuarios.add(usuario2);
+        usuarios.add(usuario3);
         return usuarios;
 
     }
