@@ -29,9 +29,10 @@ public class UsuarioDao implements usuariojava{
     public void eliminar(Long id) {
         Usuario usuario = entityManager.find(Usuario.class, id);
         entityManager.remove(usuario);
+    }
 
-
-
-
+    @Override
+    public void registrar(Usuario u) {
+        entityManager.merge(u);
     }
 }

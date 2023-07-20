@@ -32,12 +32,12 @@ cargarUsuarios();
             return;
         }
         const request = await fetch('api/usuarios/'+ id, {
-                                  method: 'DELETE',
-                                  headers: {
-                                    'Accept': 'application/json',
-                                    'Content-Type': 'application/json'
-                                  }
-                                });
+                        method: 'DELETE',
+                        headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                         }
+                      });
         location.reload();
     }
 

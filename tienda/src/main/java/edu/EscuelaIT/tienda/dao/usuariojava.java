@@ -9,5 +9,6 @@ public interface usuariojava {
 
     List<Usuario> getUsuarios();
     void eliminar(Long id);
+    void registrar(Usuario u);
 
 }
