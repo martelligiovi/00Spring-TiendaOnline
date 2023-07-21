@@ -35,4 +35,13 @@ public class UsuarioDao implements usuariojava{
     public void registrar(Usuario u) {
         entityManager.merge(u);
     }
+
+    public boolean verificarCredenciales(Usuario u) {
+        String query = "FROM Usuario WHERE email = :email AND password = :password";
+        List<Usuario> lista = entityManager.createQuery(query)
+                .setParameter("email", u.getEmail())
+                .setParameter("password", u.getPassword())
+                .getResultList();
+        return !lista.isEmpty();
+    }
 }

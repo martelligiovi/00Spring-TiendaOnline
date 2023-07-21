@@ -26,7 +26,6 @@ $(document).ready(function() {//onready
             },
                  body: JSON.stringify(datos)
           });
-          const users = await request.json();
 
     }
 
