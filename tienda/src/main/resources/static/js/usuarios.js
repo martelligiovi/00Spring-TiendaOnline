@@ -7,10 +7,6 @@ actualizarEmailUsuario();
 
 
     async function cargarUsuarios(){
-    const response = await fetch('http://localhost:8080/api/usuarios');
-      const usuarios = await response.json();
-      console.log(usuarios);
-
           const request = await fetch('api/usuarios', {
             method: 'GET',
             headers: getHeader()

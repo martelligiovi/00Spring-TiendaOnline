@@ -33,10 +33,11 @@ public class UsuarioControler {
 
 
 
-    @RequestMapping(value = "api/usuarios/{id}", method = RequestMethod.DELETE)
-    public void eliminar(@RequestHeader(value = "Authorization") String token,@PathVariable Long id) {if (!validarToken(token)) {
-        return;
-    }
+    @DeleteMapping(value = "api/usuarios/{id}")
+    public void eliminar(@RequestHeader(value = "Authorization") String token,@PathVariable Long id) {
+        if (!validarToken(token)) {
+            return;
+        }
         usuarioDao.eliminar (id);
     }
     @RequestMapping(value = "api/usuarios", method = RequestMethod.POST)
